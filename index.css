@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+}
+
+@keyframes FlyFlag {
+  0% {
+    top: 0.4em;
+    background: #de3107;
+  }
+  100% {
+    top: -0.4em;
+    background: #c71000;
+	}
+}
+
+.national-day-body {
+  position: fixed;
+  width: 15vw;
+  height: 100vh;
+  /* background: linear-gradient(0, #fefdaf, #fcf732, #ecab29, #de3107); */
+  background: linear-gradient(0, #de3107, #ecab29, #fcf732, #fefdaf);
+}
+
+.five-star-red-flag {
+  position: absolute;
+  width: 14vw;
+  height: 10vw;
+  border-left: 0.3vw solid #fff;
+  top: 1vw;
+}
+
+.line {
+  position: absolute;
+  height: 10vw;
+  width: 0.2vw;
+  background: red;
+  animation: FlyFlag ease-in-out 3s var(--delay) infinite alternate;
+}
+
+.star-center, .star-one, .star-two, .star-three, .star-four {
+  position: absolute;
+  border-top: 1vw solid yellow;
+  border-right: 1.7vw solid transparent;
+  border-left: 1.7vw solid transparent;
+  top: 3vw;
+  left: 1vw;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.star-center:before, .star-center:after,
+.star-one:before, .star-one:after,
+.star-two:before, .star-two:after,
+.star-three:before, .star-three:after,
+.star-four:before, .star-four:after {
+  content: '';
+  position: absolute;
+  border-top: 1vw solid yellow;
+  border-right: 1.7vw solid transparent;
+  border-left: 1.7vw solid transparent;
+  transform: rotate(72deg);
+  top: -1vw;
+  left: -1.6vw;
+}
+
+.star-center:after, .star-one:after, .star-two:after,
+.star-three:after, .star-four:after {
+  content: '';
+  transform: rotate(147deg);
+}
+
+.star-one {
+  left: 4.3vw;
+  transform: scale(.35) rotate(-31deg);
+  top: 1vw;
+}
+
+.star-two {
+  left: 5.3vw;
+  transform: scale(.35) rotate(-32deg);
+  top: 2.3vw;
+}
+
+.star-three {
+  left: 5.3vw;
+  transform: scale(.35) rotate(2deg);
+  top: 4vw;
+}
+
+.star-four {
+  left: 4.3vw;
+  transform: scale(.35) rotate(19deg);
+  top: 5.5vw;
+}
