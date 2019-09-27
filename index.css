@@ -13,6 +13,7 @@ body {
   position: absolute;
   width: 14vw;
   height: 15vw;
+  top: 3vw;
 }
 
 .star-center, .star-one, .star-two, .star-three, .star-four {
