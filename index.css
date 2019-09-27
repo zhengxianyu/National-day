@@ -108,10 +108,10 @@ body {
 @keyframes FlyBase {
   0% {
     opacity: 0.9;
-    transform: rotate(45deg) scale(0.5);
+    transform: rotate(45deg) scale(0.6);
   }
   100% {
-    transform: translateY(-100vh) rotate(45deg);
+    transform: translateY(-100vh) rotate(45deg) scale(0.7);
     opacity: 0.4;
 	}
 }
