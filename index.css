@@ -4,7 +4,6 @@ body {
 
 .national-day-body {
   position: fixed;
-  overflow: hidden;
   width: 15vw;
   height: 100vh;
   background: linear-gradient(0, #fcf732, #ecab29, #de3107, #de3107);
@@ -24,7 +23,7 @@ body {
   top: 7vw;
   left: 1vw;
   z-index: 1;
-  transform: scale(1);
+  transform: scale(1.5);
 }
 
 .star-center:before, .star-center:after,
@@ -49,25 +48,147 @@ body {
 }
 
 .star-one {
-  left: 4.3vw;
-  transform: scale(.35) rotate(-31deg);
-  top: 5vw;
+  left: 5.5vw;
+  transform: scale(.5) rotate(-31deg);
+  top: 4.5vw;
 }
 
 .star-two {
-  left: 5.3vw;
-  transform: scale(.35) rotate(-32deg);
-  top: 6.3vw;
+  left: 7.4vw;
+  transform: scale(.5) rotate(-32deg);
+  top: 6.2vw;
 }
 
 .star-three {
-  left: 5.3vw;
-  transform: scale(.35) rotate(2deg);
-  top: 8vw;
+  left: 7.3vw;
+  transform: scale(.5) rotate(2deg);
+  top: 8.5vw;
 }
 
 .star-four {
-  left: 4.3vw;
-  transform: scale(.35) rotate(19deg);
-  top: 9.5vw;
+  left: 5.4vw;
+  transform: scale(.5) rotate(19deg);
+  top: 10vw;
+}
+
+@keyframes FlyOne {
+  10% {
+    opacity: 0.9;
+    transform: translateX(7vw) translateY(-10vh) rotate(42deg);
+  }
+  40% {
+    transform: translateX(2vw) translateY(-30vh) rotate(45deg);
+  }
+  70% {
+    transform: translateX(13vw) translateY(-70vh) rotate(40deg);
+  }
+  100% {
+    transform: translateX(3vw) translateY(-120vh) rotate(45deg);
+    opacity: 0.4;
+	}
+}
+
+@keyframes FlyTwo {
+  10% {
+    opacity: 0.9;
+    transform: translateX(2vw) translateY(-15vh) rotate(40deg);
+  }
+  40% {
+    transform: translateX(10vw) translateY(-60vh) rotate(45deg);
+  }
+  70% {
+    transform: translateX(3vw) translateY(-90vh) rotate(47deg);
+  }
+  100% {
+    transform: translateX(12vw) translateY(-100vh) rotate(44deg);
+    opacity: 0.2;
+	}
+}
+
+@keyframes FlyBase {
+  0% {
+    opacity: 0.9;
+    transform: rotate(45deg) scale(0.5);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0.4;
+	}
+}
+
+.balloon {
+  position: absolute;
+  bottom: 0;
+}
+
+.balloon-base, .balloon-yellow,
+.balloon-red, .balloon-green,
+.balloon-orange {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background: #faf9f9;
+  border-radius: 50% 50% 25% 50%;
+  transform: rotate(45deg);
+  box-shadow: 6px -14px 35px 3px #DDA8E7 inset;
+  animation: FlyBase 16s linear infinite;
+  transform: scale(0.7);
+}
+
+.balloon-base {
+  animation: FlyOne 20s linear infinite;
+}
+
+.balloon-yellow  {
+  box-shadow: 6px -14px 35px 3px yellow inset;
+  animation: FlyTwo 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.balloon-red, .balloon-green, .balloon-orange {
+  box-shadow: 6px -14px 35px 3px red inset;
+  animation: FlyBase 16s linear infinite;
+  transform: scale(0.5);
+}
+
+.balloon-green {
+  box-shadow: 6px -14px 35px 3px yellow inset;
+  left: 3vw;
+  animation-delay: 1s;
+}
+
+.balloon-orange {
+  box-shadow: 6px -14px 35px 3px orange inset;
+  left: 8vw;
+  animation-delay: 4s;
+}
+
+.balloon-base::after, .balloon-yellow::after,
+.balloon-red::after, .balloon-green::after,
+.balloon-orange::after {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  content: "";
+  display: block;
+  border: 8px solid transparent;
+  border-right-color: #DDA8E7;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+
+.balloon-red::after {
+  border-right-color: red;
+}
+
+.balloon-yellow::after {
+  border-right-color: yellow;
+}
+
+.balloon-green::after {
+  border-right-color: yellow;
+}
+
+.balloon-orange::after {
+  border-right-color: orange;
 }
