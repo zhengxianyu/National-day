@@ -1,9 +1,4 @@
 $(function() {
-  function numberRandom(max, min) {
-    var num = ( Math.random() * ( max - min ) + min ).toFixed( 2 )
-    return num;
-  }
-
   createRedFlag();
   createInsideWall();
 
