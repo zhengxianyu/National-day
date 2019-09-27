@@ -216,6 +216,7 @@ body {
   transform: rotate(4deg);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 50%;
+  width: 8.9vw;
 }
 
 .eaves:before, .eaves-two:before {
