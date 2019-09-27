@@ -2,42 +2,18 @@ body {
   margin: 0;
 }
 
-@keyframes FlyFlag {
-  0% {
-    top: 0.4em;
-    background: #de3107;
-  }
-  100% {
-    top: -0.4em;
-    background: #c71000;
-	}
-}
-
 .national-day-body {
   position: fixed;
   overflow: hidden;
   width: 15vw;
   height: 100vh;
-  background: linear-gradient(0, #fefdaf, #fcf732, #ecab29, #de3107);
-  /* background: linear-gradient(0, #ecab29, #fcf732, #fefdaf); */
+  background: linear-gradient(0, #fcf732, #ecab29, #de3107, #de3107);
 }
 
 .five-star-red-flag {
   position: absolute;
   width: 14vw;
-  height: 10vw;
-  border-left: 0.3vw solid #fff;
-  top: 1vw;
-  transform: rotate(5deg);
-}
-
-.line {
-  position: absolute;
-  height: 10vw;
-  width: 0.2em;
-  animation: FlyFlag ease-in-out 3s var(--delay) infinite alternate;
-  /* box-shadow: 1px -1px 1px #666; */
-  box-shadow: 1px 1px 1px #666;
+  height: 15vw;
 }
 
 .star-center, .star-one, .star-two, .star-three, .star-four {
@@ -45,7 +21,7 @@ body {
   border-top: 1vw solid yellow;
   border-right: 1.7vw solid transparent;
   border-left: 1.7vw solid transparent;
-  top: 3vw;
+  top: 7vw;
   left: 1vw;
   z-index: 1;
   transform: scale(1);
@@ -75,256 +51,23 @@ body {
 .star-one {
   left: 4.3vw;
   transform: scale(.35) rotate(-31deg);
-  top: 1vw;
+  top: 5vw;
 }
 
 .star-two {
   left: 5.3vw;
   transform: scale(.35) rotate(-32deg);
-  top: 2.3vw;
+  top: 6.3vw;
 }
 
 .star-three {
   left: 5.3vw;
   transform: scale(.35) rotate(2deg);
-  top: 4vw;
+  top: 8vw;
 }
 
 .star-four {
   left: 4.3vw;
   transform: scale(.35) rotate(19deg);
-  top: 5.5vw;
-}
-
-.house {
-  position: absolute;
-  bottom: 11vw;
-}
-
-.roof {
-  position: absolute;
-  left: 2vw;
-  border-left: 3.5vw solid transparent;
-  border-right: 3.5vw solid transparent;
-  border-bottom: 1.5vw solid #e91519;
-  border-radius: 8px;
-}
-
-.roof:before {
-  content: '';
-  position: absolute;
-  border-left: 2vw solid transparent;
-  border-right: 2vw solid transparent;
-  border-bottom: 0.8vw solid #f4b90c;
-  left: -2vw;
-  top: 0.4vw;
-}
-
-.roof:after {
-  content: '';
-  position: absolute;
-  background: #e91519;
-  width: 0.4vw;
-  height: 0.8vw;
-  top: -0.5vw;
-  left: -0.1vw;
-}
-
-.roof-right {
-  position: absolute;
-  border-top: 1.1vw solid #ed740e;
-  border-left: 3.8vw solid transparent;
-  border-right: 5vw solid transparent;
-  top: 0.5vw;
-  left: -0.3vw;
-  transform: rotate(6deg);
-}
-
-.roof-right:before {
-  content: '';
-  position: absolute;
-  border-bottom: 1vw solid #ed740e;
-  border-left: 5.3vw solid transparent;
-  border-right: 2.3vw solid transparent;
-  top: -1.1vw;
-  left: -0.4vw;
-  transform: rotate(-1deg);
-}
-
-.roof-right:after {
-  content: '';
-  position: absolute;
-  background: #ed740e;
-  width: 0.4vw;
-  height: 0.4vw;
-  top: -1.5vw;
-  left: 4.5vw;
-}
-
-.roof-horn {
-  position: absolute;
-  width: 7vw;
-  top: 1.5vw;
-  left: -4vw;
-  border-bottom: 0.2vw solid #fff;
-  border-bottom-left-radius: 70%;
-}
-
-.roof-horn:before {
-  content: '';
-  position: absolute;
-  width: 7.5vw;
-  top: 0.2vw;
-  border-bottom: 0.3vw solid #826d5e;
-  border-bottom-left-radius: 70%;
-}
-
-.roof-horn:after {
-  content: '';
-  position: absolute;
-  width: 7vw;
-  height: 0.5vw;
-  background: #e91517;
-  top: 0.45vw;
-  left: 0.7vw;
-}
-
-.roof-horn:nth-child(2) {
-  left: 2.8vw;
-  top: 1.75vw;
-  transform: rotate(5deg);
-  border-bottom-right-radius: 70%;
-}
-
-.roof-horn:nth-child(2):before {
-  border-bottom-right-radius: 70%;
-}
-
-.eaves, .eaves-two {
-  position: absolute;
-  top: 1.8vw;
-  width: 8vw;
-  height: 0.6vw;
-  border-bottom: 0.6vw solid #ed6f0e;
-  left: -4.7vw;
-  border-bottom-left-radius: 50%;
-}
-
-.eaves-two {
-  left: 3vw;
-  top: 2.1vw;
-  transform: rotate(4deg);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 50%;
-}
-
-.eaves:before, .eaves-two:before {
-  content: '';
-  position: absolute;
-  width: 8.5vw;
-  height: 0.2vw;
-  border-bottom: 0.2vw solid #7d6e5e;
-  top: 1.05vw;
-  border-bottom-left-radius: 70%;
-}
-
-.eaves-two:before {
-  top: 0.95vw;
-  left: 0.8vw;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 70%;
-}
-
-.eaves:after, .eaves-two:after {
-  content: '';
-  position: absolute;
-  width: 7vw;
-  height: 0.3vw;
-  background: #fff;
-  top: 1.45vw;
-  left: 1.1vw;
-  box-shadow: 2px 3px 5px #333;
-}
-
-.eaves-two:after {
-  top: 1.35vw;
-  left: 0.5vw;
-}
-
-.wall-inside {
-  position: absolute;
-  width: 7vw;
-  height: 2vw;
-  background: #eb4b2d;
-  left: -3.6vw;
-  top: 3.6vw;
-  z-index: 1;
-}
-
-.wall-inside-right {
-  position: absolute;
-  left: 3.4vw;
-  top: 3.58vw;
-  transform: rotate(3deg);
-  z-index: 1;
-}
-
-.wall-block {
-  position: absolute;
-  width: 1vw;
-  height: 2.05vw;
-  background: #b58264;
-  transform: rotate(-2deg);
-}
-
-.wall-column {
-  position: absolute;
-  width: 0.3vw;
-  height: 2.05vw;
-  background: #fff;
-  transform: rotate(-2deg);
-}
-
-.enclosing-left-top {
-  position: absolute;
-  top: 4.95vw;
-  width: 4vw;
-  height: 0.5vw;
-  background: #fff;
-  transform: rotate(-4deg);
-  z-index: 2;
-  border-top: 0.15vw solid #e01e22;
-}
-
-.enclosing-right-top {
-  position: absolute;
-  width: 12vw;
-  height: 0.5vw;
-  background: #fff;
-  left: 3.9vw;
-  top: 5.4vw;
-  z-index: 2;
-  transform: rotate(5deg);
-  border-top: 0.1vw solid #e01e22;
-}
-
-.enclosing-left-wall {
-  position: absolute;
-  top: 5.6vw;
-  left: -1vw;
-  width: 5vw;
-  height: 4.9vw;
-  background: #e91515;
-  box-shadow: 0 2px 10px 4px #333;
-}
-
-.enclosing-right-wall {
-  position: absolute;
-  width: 14vw;
-  height: 5vw;
-  background: #e91515;
-  top: 5.4vw;
-  left: 3.9vw;
-  transform: rotate(-1deg);
-  box-shadow: 2px 5px 5px #333;
+  top: 9.5vw;
 }
