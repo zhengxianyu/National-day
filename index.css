@@ -94,13 +94,13 @@ body {
     transform: translateX(2vw) translateY(-15vh) rotate(40deg);
   }
   40% {
-    transform: translateX(10vw) translateY(-60vh) rotate(45deg);
+    transform: translateX(16vw) translateY(-60vh) rotate(45deg);
   }
   70% {
-    transform: translateX(3vw) translateY(-90vh) rotate(47deg);
+    transform: translateX(20vw) translateY(-90vh) rotate(47deg);
   }
   100% {
-    transform: translateX(12vw) translateY(-100vh) rotate(44deg);
+    transform: translateX(23vw) translateY(-100vh) rotate(44deg);
     opacity: 0.2;
 	}
 }
@@ -123,7 +123,8 @@ body {
 
 .balloon-base, .balloon-yellow,
 .balloon-red, .balloon-green,
-.balloon-orange {
+.balloon-orange, .balloon-pink,
+.balloon-blue {
   position: absolute;
   width: 5vw;
   height: 5vw;
@@ -145,27 +146,43 @@ body {
   animation-delay: 10s;
 }
 
-.balloon-red, .balloon-green, .balloon-orange {
+.balloon-red {
   box-shadow: 6px -14px 35px 3px red inset;
   animation: FlyBase 16s linear infinite;
-  transform: scale(0.5);
 }
 
 .balloon-green {
   box-shadow: 6px -14px 35px 3px yellow inset;
   left: 3vw;
   animation-delay: 1s;
+  animation: FlyBase 18s linear infinite;
 }
 
 .balloon-orange {
   box-shadow: 6px -14px 35px 3px orange inset;
   left: 8vw;
-  animation-delay: 4s;
+  animation-delay: 6s;
+  animation: FlyBase 19s linear infinite;
+}
+
+.balloon-pink {
+  box-shadow: 6px -14px 35px 3px pink inset;
+  left: 6vw;
+  animation-delay: 3s;
+  animation: FlyBase 20s linear infinite;
+}
+
+.balloon-blue {
+  box-shadow: 6px -14px 35px 3px #87CEFA inset;
+  left: 4vw;
+  animation-delay: 10s;
+  animation: FlyBase 17s linear infinite;
 }
 
 .balloon-base::after, .balloon-yellow::after,
 .balloon-red::after, .balloon-green::after,
-.balloon-orange::after {
+.balloon-orange::after, .balloon-pink::after,
+.balloon-blue::after {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -191,4 +208,12 @@ body {
 
 .balloon-orange::after {
   border-right-color: orange;
+}
+
+.balloon-pink::after {
+  border-right-color: pink;
+}
+
+.balloon-blue::after {
+  border-right-color: #87CEFA;
 }
