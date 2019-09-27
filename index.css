@@ -19,7 +19,7 @@ body {
   width: 15vw;
   height: 100vh;
   /* background: linear-gradient(0, #fefdaf, #fcf732, #ecab29, #de3107); */
-  background: linear-gradient(0, #de3107, #ecab29, #fcf732, #fefdaf);
+  background: linear-gradient(0, #ecab29, #fcf732, #fefdaf);
 }
 
 .five-star-red-flag {
