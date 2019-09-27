@@ -36,6 +36,7 @@ body {
   height: 10vw;
   width: 0.2em;
   animation: FlyFlag ease-in-out 3s var(--delay) infinite alternate;
+  box-shadow: 1px -1px 1px #666;
 }
 
 .star-center, .star-one, .star-two, .star-three, .star-four {
@@ -161,7 +162,7 @@ body {
 
 .roof-horn {
   position: absolute;
-  width: 7.5vw;
+  width: 7vw;
   top: 1.5vw;
   left: -4vw;
   border-bottom: 0.2vw solid #fff;
@@ -180,7 +181,7 @@ body {
 .roof-horn:after {
   content: '';
   position: absolute;
-  width: 6.55vw;
+  width: 7vw;
   height: 0.5vw;
   background: #e91517;
   top: 0.45vw;
@@ -188,8 +189,8 @@ body {
 }
 
 .roof-horn:nth-child(2) {
-  left: 2.6vw;
-  top: 1.8vw;
+  left: 2.8vw;
+  top: 1.75vw;
   transform: rotate(5deg);
   border-bottom-right-radius: 70%;
 }
@@ -241,6 +242,7 @@ body {
   background: #fff;
   top: 1.45vw;
   left: 1.1vw;
+  box-shadow: 2px 3px 5px #333;
 }
 
 .eaves-two:after {
@@ -312,6 +314,7 @@ body {
   width: 5vw;
   height: 4.9vw;
   background: #e91515;
+  box-shadow: 0 2px 10px 4px #333;
 }
 
 .enclosing-right-wall {
@@ -322,4 +325,5 @@ body {
   top: 5.4vw;
   left: 3.9vw;
   transform: rotate(-1deg);
+  box-shadow: 2px 5px 5px #333;
 }
