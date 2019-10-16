@@ -170,15 +170,6 @@ body {
   border-bottom-left-radius: 70%;
 }
 
-.roof-horn:before {
-  content: '';
-  position: absolute;
-  width: 7.5vw;
-  top: 0.2vw;
-  border-bottom: 0.3vw solid #826d5e;
-  border-bottom-left-radius: 70%;
-}
-
 .roof-horn:after {
   content: '';
   position: absolute;
@@ -202,38 +193,28 @@ body {
 
 .eaves, .eaves-two {
   position: absolute;
-  top: 1.8vw;
   width: 8vw;
   height: 0.6vw;
-  border-bottom: 0.6vw solid #ed6f0e;
+  border-bottom: 0.4vw solid #ed6f0e;
   left: -4.7vw;
   border-bottom-left-radius: 50%;
+  top: 2.2vw;
 }
 
 .eaves-two {
   left: 3vw;
-  top: 2.1vw;
   transform: rotate(4deg);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 50%;
   width: 8.9vw;
-}
-
-.eaves:before, .eaves-two:before {
-  content: '';
-  position: absolute;
-  width: 8.5vw;
-  height: 0.2vw;
-  border-bottom: 0.2vw solid #7d6e5e;
-  top: 1.05vw;
-  border-bottom-left-radius: 70%;
+  top: 2.5vw;
 }
 
 .eaves-two:before {
-  top: 0.95vw;
   left: 0.8vw;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 70%;
+  top: 2.5vw;
 }
 
 .eaves:after, .eaves-two:after {
@@ -242,14 +223,14 @@ body {
   width: 7vw;
   height: 0.3vw;
   background: #fff;
-  top: 1.45vw;
   left: 1.1vw;
   box-shadow: 2px 3px 5px #333;
+  top: 1vw;
 }
 
 .eaves-two:after {
-  top: 1.35vw;
   left: 0.5vw;
+  top: 1vw;
 }
 
 .wall-inside {
