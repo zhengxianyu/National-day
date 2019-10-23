@@ -23,7 +23,6 @@ body {
   border-left: 1.7vw solid transparent;
   top: 7vw;
   left: 1vw;
-  z-index: 1;
   transform: scale(1.5);
 }
 
